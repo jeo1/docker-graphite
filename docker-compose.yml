@@ -14,7 +14,6 @@ services:
       - "${GRAPHITE_CONFIG}:/opt/graphite/conf"
       - "${GRAPHITE_STORAGE}:/opt/graphite/storage"
       - "${GRAPHITE_CUSTOM_FUNCTIONS}:/opt/graphite/webapp/graphite/functions/custom"
-      - "${GRAPHITE_NGINX}:/etc/nginx"
       - "${STATSD_CONFIG}:/opt/statsd/config"
       - "${GRAPHITE_LOG_CONFIG}:/etc/logrotate.d"
       - "${GRAPHITE_LOG}:/var/log"

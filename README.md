@@ -7,7 +7,6 @@ TIMEZONE=America/Toronto
 GRAPHITE_CONFIG=<path to graphite config>
 GRAPHITE_STORAGE=<path to graphite storage>
 GRAPHITE_CUSTOM_FUNCTIONS=<path to graphite custom functions>
-GRAPHITE_NGINX=<path to graphite nginx>
 STATSD_CONFIG=<path to statsd config>
 GRAPHITE_LOG_CONFIG=<path to graphite log config>
 GRAPHITE_LOG=<path to graphite log>
