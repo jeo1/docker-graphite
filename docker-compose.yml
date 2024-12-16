@@ -1,0 +1,20 @@
+services:
+  graphite:
+    image: graphiteapp/graphite-statsd
+    pull_policy: always
+    container_name: graphite
+    restart: always
+    ports:
+        - 80:80
+        - 2003-2004:2003-2004
+        - 2023-2024:2023-2024
+        - 8125:8125/udp
+        - 8126:8126
+    volumes:
+      - "${GRAPHITE_CONFIG}:/opt/graphite/conf"
+      - "${GRAPHITE_STORAGE}:/opt/graphite/storage"
+      - "${GRAPHITE_CUSTOM_FUNCTIONS}:/opt/graphite/webapp/graphite/functions/custom"
+      - "${GRAPHITE_NGINX}:/etc/nginx"
+      - "${STATSD_CONFIG}:/opt/statsd/config"
+      - "${GRAPHITE_LOG_CONFIG}:/etc/logrotate.d"
+      - "${GRAPHITE_LOG}:/var/log"
